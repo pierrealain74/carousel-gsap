@@ -1,5 +1,6 @@
 let sliderContainer = document.querySelector('.slider-container');
 let innerSlider = document.querySelector('.inner-slider');
+const cardsElement = document.querySelectorAll('.card'); 
 
 let pressed = false;
 let startX;
@@ -11,10 +12,19 @@ sliderContainer.addEventListener("mousedown", (e) => {
     sliderContainer.style.cursor = "grabbing";
 });
 
-sliderContainer.addEventListener("mouseenter", () => {
-    sliderContainer.style.cursor = "grab";
+sliderContainer.addEventListener("mouseenter", (event) => {
     
+    sliderContainer.style.cursor = "grab";
+    const image = event.target;
+    const index = image.getAttribute("index");
+    console.log("Index de l'image :", index);
+
+
+
+
+
 });
+
 
 sliderContainer.addEventListener("mouseup", () => {
     sliderContainer.style.cursor = "grab";
