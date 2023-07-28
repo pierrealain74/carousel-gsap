@@ -1,9 +1,8 @@
-
-
 /* 
 
 V2
 La carousel slide à droite et gauche selon la souris
+
 */
 class HorizontalMouseDrivenCarousel {
 	constructor(options = {}) {
@@ -31,7 +30,7 @@ class HorizontalMouseDrivenCarousel {
 
 	init() {
 		this.listItems = this.getList().children.length;
-		this.listWidth = this.listItems * 5; // Adjust 100 to control the width of each item
+		this.listWidth = this.listItems * 4; // Adjust 100 to control the width of each item
 
 		this.getList().style.width = `${this.listWidth}%`;
 	}
@@ -47,7 +46,7 @@ class HorizontalMouseDrivenCarousel {
 				const offset = -(this.posX / carouselWidth * (this.listWidth - carouselWidth));
 
 				TweenMax.to(this.getList(), 0.3, {
-					x: -offset, // Reversed the direction by multiplying offset by -1
+					x: -offset,
 					ease: Power4.easeOut,
 				});
 			},
@@ -57,10 +56,6 @@ class HorizontalMouseDrivenCarousel {
 }
 
 new HorizontalMouseDrivenCarousel();
-
-
-
-
 
 
 

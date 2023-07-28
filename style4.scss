@@ -7,6 +7,7 @@
 body {
 	color: #fff;
 	background-color: #021417;
+    overflow: hidden;
 }
 
 .container {
@@ -41,6 +42,15 @@ body {
         width: 130px; // Change the width to 100% for horizontal display
         height: 400px; // Allow the image to maintain its aspect ratio
         object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease, height 0.3s ease;
+
+        &:hover{
+        
+            filter: grayscale(2%);
+            height: 420px;
+    
+        }
     }
 }
 
@@ -67,7 +77,7 @@ a {
 
 	&#{&}--16-9 {
 		/* padding-bottom:  math.div(9, 16); */
-		padding-bottom: 56%;
+		padding-bottom: 40%;
 	}
 }
 
@@ -95,9 +105,10 @@ a {
 		width: 30%;
 		position: absolute;
 		top: 50%; // Center the carousel vertically
-		left: 50%; // Center the carousel horizontally
+		left: 80%; // Center the carousel horizontally
 		transform: translate(-50%, -50%); // Center the carousel
 		z-index: 1;
+        height: 500px;
 	}
 
 	&__list-item {
