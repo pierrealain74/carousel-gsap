@@ -34,6 +34,7 @@ class HorizontalMouseDrivenCarousel {
 	}
 
 	init() {
+		
 		TweenMax.set(this.getBgImgs(), {
 			autoAlpha: 0,
 			scale: 1.05
@@ -43,6 +44,10 @@ class HorizontalMouseDrivenCarousel {
 			autoAlpha: 1,
 			scale: 1
 		});
+
+		TweenMax.set(this.getListItems(), {
+            y: 0
+        });
 
 		this.listItems = this.getListItems().length - 1;
 		
