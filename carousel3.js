@@ -47,6 +47,9 @@ class HorizontalMouseDrivenCarousel {
 		this.listItems = this.getListItems().length - 1;
 		
 		this.listOpacityController(0);
+
+		/**Call B&W function */
+		/* this.convertToBlackAndWhite('colorImage', 'bwCanvas'); */
 	}
 
     initCursor() {
@@ -134,6 +137,36 @@ class HorizontalMouseDrivenCarousel {
 			}
 		}
 	}
+
+	/**Changer les images en B&W */
+	/* convertToBlackAndWhite(colorImageId, bwCanvasId) {
+		const colorImage = document.getElementById(colorImageId);
+		const bwCanvas = document.getElementById(bwCanvasId);
+		const context = bwCanvas.getContext('2d');
+
+		const image = new Image();
+		image.crossOrigin = 'anonymous'; // Enable CORS for cross-origin images
+		image.src = colorImage.src;
+
+		image.onload = function () {
+			context.drawImage(image, 0, 0, bwCanvas.width, bwCanvas.height);
+
+			const imageData = context.getImageData(0, 0, bwCanvas.width, bwCanvas.height);
+			const data = imageData.data;
+
+			for (let i = 0; i < data.length; i += 4) {
+				const grayscale = (data[i] + data[i + 1] + data[i + 2]) / 3;
+				data[i] = grayscale;
+				data[i + 1] = grayscale;
+				data[i + 2] = grayscale;
+			}
+
+			context.putImageData(imageData, 0, 0);
+		};
+	} */
+
+
+
 }
 
 new HorizontalMouseDrivenCarousel();

@@ -38,8 +38,8 @@ body {
 	color: #fff;
 
     img {
-        width: 380px; // Change the width to 100% for horizontal display
-        height: 600px; // Allow the image to maintain its aspect ratio
+        width: 130px; // Change the width to 100% for horizontal display
+        height: 400px; // Allow the image to maintain its aspect ratio
         object-fit: cover;
     }
 }
@@ -101,7 +101,7 @@ a {
 	}
 
 	&__list-item {
-		flex: 0 0 80%; // Set each list item to occupy the full width
+		flex: 0 0 30%; // Set each list item to occupy the full width
 		text-align: center; // Center the content inside each item
 
 		a {

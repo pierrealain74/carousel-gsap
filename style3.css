@@ -37,8 +37,8 @@ body {
   color: #fff;
 }
 .u-a5 img {
-  width: 380px;
-  height: 600px;
+  width: 130px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -91,7 +91,7 @@ a {
   z-index: 1;
 }
 .c-mouse-vertical-carousel__list-item {
-  flex: 0 0 80%;
+  flex: 0 0 30%;
   text-align: center;
 }
 .c-mouse-vertical-carousel__list-item a {
